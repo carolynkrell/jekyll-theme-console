@@ -1,6 +1,7 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
   <div class="menu">
+    <p>{{site.header}}</p>
     <ul>
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -9,5 +10,6 @@
         {%- endif -%}
       {%- endfor -%}
     </ul>
+    <div style="clear: both;"></div>
   </div>
 </header>
